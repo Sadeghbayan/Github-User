@@ -1,0 +1,10 @@
+@import '../variables';
+
+body {
+    font-family: $font-family-base;   
+    font-weight: $font-weight-normal;
+    line-height: 1.2;
+    background: linear-gradient(45deg, #F4EBE5, #E3D4CA);
+    color: $gray;
+    font-size: $font-size-default;
+}

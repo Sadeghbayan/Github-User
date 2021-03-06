@@ -1,0 +1,35 @@
+// colors
+$green:   #28a745;
+$teal:    #20c997;
+$cyan:    #17a2b8;
+$black: #000000;
+$dark-gray: #5e5e5e;
+$light-brown: #FFF9F1;
+$gray: #C0C3C9;
+$white: #ffffff;
+
+// breakpoints
+$grid-breakpoints: (
+  xxs: 0,
+  xs: 320px,
+  sm: 576px,
+  md: 728px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1680px,
+  xxxl: 1920px
+) !default;
+
+$container-max-width: 1024px;
+
+//fonts adjustment
+//font-family which imported in font.scss
+$font-family-base: 'Source Sans Pro', sans-serif;;
+
+$font-weight-light:           200;
+$font-weight-normal:          400;
+$font-weight-bold:            600;
+
+$font-size-default:  20px;
+$font-size-large:       34px !default;
+$font-size-small:       15px !default;

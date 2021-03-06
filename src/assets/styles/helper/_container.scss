@@ -1,0 +1,12 @@
+@import '../variables';
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width: $container-max-width;
+    width: 100%;
+    padding: 1rem;
+    margin: 0 auto;
+}

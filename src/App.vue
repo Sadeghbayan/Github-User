@@ -1,30 +1,56 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
+  <header class="header">
+    <div class="header__inner container">
+      <router-link to="/">
+        <img alt="Homeday logo" src="./assets/logo.svg" class="header__logo" />
+      </router-link>
+      <h1>Github Repo</h1>
+    </div>
+  </header>
   <router-view />
+  <footer class="footer">
+    <div class="footer__inner container">
+      <p>© 2021 Homeday assignment</p>
+    </div>
+  </footer>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+.header {
+  background: $white;
+  padding: 16px 0;
+  height: 40px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  color: $dark-gray;
+  &__inner {
+    display: flex;
+    flex-direction: row;
   }
+
+  &__logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+
+  h1 {
+    margin: 0;
+    align-self: center;
+    font-size: $font-size-default;
+    font-weight: $font-weight-bold;
+  }
+}
+//TODO: make a mixin for that so header and footer can reuse it
+.footer {
+  background: $white;
+  padding: 16px 0;
+  height: 40px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  color: $dark-gray;
+  font-size: $font-size-small;
 }
 </style>
