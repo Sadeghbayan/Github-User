@@ -5,6 +5,17 @@ body {
     font-weight: $font-weight-normal;
     line-height: 1.2;
     background: linear-gradient(45deg, #F4EBE5, #E3D4CA);
-    color: $gray;
+    color: $dark-gray;
     font-size: $font-size-default;
+    height: 100vh;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.wide {
+    width: 100%;
 }
