@@ -24,3 +24,17 @@ interface Repo {
     node_id: string;
   };
 }
+
+interface Store {
+  state: State;
+  methods?: any;
+  getters?: any;
+}
+
+interface State {
+  fullName: string;
+  githubUsername: string;
+  email: string;
+  hasAcceptedTerms: boolean;
+  preDefinedUser: string;
+}
