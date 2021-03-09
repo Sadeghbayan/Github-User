@@ -23,6 +23,7 @@
 import pageValidator from "@/utils/pageValidator";
 
 export default {
+  name: "pageControl",
   props: {
     nextStep: {
       type: Object,
@@ -47,37 +48,18 @@ export default {
   justify-content: space-between;
   width: 100%;
   margin-top: auto;
-}
 
-.page-control__previous-step {
-  position: relative;
-  margin-right: auto;
-  padding-left: 1.5rem;
-
-  &::after {
-    position: absolute;
-    left: 0.5rem;
-    top: 50%;
-    width: 0.75rem;
-    height: 0.75rem;
-    content: " ";
-    transform: scaleX(-1) translateY(calc(-50% + 1px));
-  }
-}
-
-.steps-control__next-step {
-  position: relative;
-  margin-left: auto;
-  padding-right: 1.5rem;
-
-  &::after {
-    position: absolute;
-    right: 0.5rem;
-    top: 50%;
-    width: 0.75rem;
-    height: 0.75rem;
-    content: " ";
-    transform: translateY(calc(-50% + 1px));
+  .main-cta {
+    cursor: pointer;
+    background: $homeday-blue;
+    padding: 15px;
+    border-radius: 3px;
+    color: $white;
+    border: medium none;
+    font-size: $font-size-small;
+    &:disabled {
+      background-color: $gray;
+    }
   }
 }
 </style>
