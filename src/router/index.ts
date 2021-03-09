@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
+import { store } from "@/store/store";
 import Home from "../views/Home.vue";
-
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
@@ -24,6 +24,21 @@ const routes: Array<RouteRecordRaw> = [
     name: "User Information",
     component: () =>
       import(/* webpackChunkName: "github-user" */ "../views/Github-user.vue"),
+
+    // Avoid users trying to reach page without having entered data
+    beforeEnter(to, from, next) {
+      const { state } = store;
+      if (state.githubUsername === "") {
+        next("/request-form");
+        return;
+      }
+      next();
+    },
+  },
+  {
+    path: "/:catchAll(.*)",
+    component: () =>
+      import(/* webpackChunkName: "notFound" */ "../views/NotFound.vue"),
   },
 ];
 
