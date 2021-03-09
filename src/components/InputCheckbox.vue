@@ -5,7 +5,8 @@
       :name="name"
       type="checkbox"
       class="input-checkbox"
-      @input="handleInput"
+      :value="modelValue"
+      @change="$emit('update:modelValue', $event.target.checked)"
     />
     <label :for="id" class="input-checkbox__label">
       {{ label }}
@@ -28,21 +29,10 @@ export default {
       type: String,
       required: true
     },
-    value: {
+    modelValue: {
       type: Boolean,
       required: false,
       default: false
-    }
-  },
-  data() {
-    return {
-      inputValue: this.value
-    };
-  },
-  methods: {
-    handleInput(e) {
-      this.inputValue = e.target.value;
-      this.$emit("input", this.inputValue);
     }
   }
 };
@@ -96,13 +86,13 @@ export default {
   &::after {
     position: absolute;
     left: calc(-1.5rem + 1px);
-    height: 0.5rem;
+    height: 0.4rem;
     width: 0.75rem;
     content: none;
     border-left: 2px solid;
     border-bottom: 2px solid;
     border-color: $dark-blue;
-    transform: rotate(-45deg) translateY(-2px);
+    transform: rotate(-53deg) translateY(-1px);
   }
 }
 </style>

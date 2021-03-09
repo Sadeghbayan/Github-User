@@ -8,13 +8,15 @@
       :name="name"
       :type="type"
       class="input-text"
-      @input="handleInput"
+      :value="modelValue"
+      @input="$emit('update:modelValue', $event.target.value)"
     />
   </div>
 </template>
 
 <script>
-export default {
+import { defineComponent } from "vue";
+export default defineComponent({
   props: {
     id: {
       type: String,
@@ -32,24 +34,13 @@ export default {
       type: String,
       required: true
     },
-    value: {
+    modelValue: {
       type: String,
       required: false,
       default: ""
     }
-  },
-  data() {
-    return {
-      inputValue: this.value
-    };
-  },
-  methods: {
-    handleInput(e) {
-      this.inputValue = e.target.value;
-      this.$emit("input", this.inputValue);
-    }
   }
-};
+});
 </script>
 
 <style lang="scss">
@@ -57,6 +48,7 @@ export default {
   display: flex;
   flex-direction: column;
   margin-bottom: 1.25rem;
+  width: 100%;
 }
 
 label {
@@ -66,14 +58,18 @@ label {
 }
 
 .input-text {
-  width: 300px;
+  width: 100%;
+  box-sizing: border-box;
   height: 35px;
   padding: 0 0.5rem;
   border: 1px solid $gray;
   caret-color: $dark-blue;
   color: $dark-blue;
   transition: border-color 0.3s ease-in-out;
-
+  font-size: $font-size-small;
+  @include mq(md) {
+    width: 300px;
+  }
   &:focus {
     outline: none;
     box-shadow: 0 0 0 3px $dark-gray;
