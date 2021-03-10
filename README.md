@@ -15,7 +15,7 @@ A simple Vue.js application for fetching GitHub user data.
 - Next button should be disabled if input on the current step is invalid.
 - Form should handle errors and basic validations.
 - Available views: - / - Home: root view with top three repositoris - /:user_name/:repo_name - display single repository for user - /request-form - search form to query for github user -/github-user view with user information and list of repositories - /404
-- I decided to create simple store(no Vuex) to handle the state of the application because this will make it really easy to navigate through the application without losing the data.
+- I decided to create simple store(no Vuex) as it's very simple to have it with Reactivity.
 - Does not allow direct access of pages from browsers without required information (handled in router file)
 - I created a hook for Api calls and reused it for other hooks to collect needed data.
 - I used native `fetch()` to consume the Github API.
