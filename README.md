@@ -2,20 +2,12 @@
 
 A simple Vue.js application for fetching GitHub user data.
 
-- [Solution for the demo](#solution-for-the-demo)
-  - [Bonus](#bonus)
-  - [Additional info](#additional-info)
-  - [General guidelines](#general-guidelines)
-- [Build Setup](#build-setup)
-- [Decisions made](#decisions-made)
-- [Wrap-up](#wrap-up)
-
 ## Instructions for the demo
 
 - I decided to build the project with Vue and Typescript.
 - I used Vue CLI to set up the project and built on the structure provided by it
 - The workflow should contain 3 steps:
-  1. list of top three repositories from predefined user.
+  1. List of top three repositories from predefined user.
   2. Simple form that collects user data - fullname - email - github user - terms (all fields are required).
   3. Listing user avatar + some informations and list of user repos which can be limited by number
   4. Showing a user repository after selecting it
