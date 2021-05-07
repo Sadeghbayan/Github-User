@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="footer__inner container">
-      <p>© 2021 Homeday assignment</p>
+      <p>© 2021 Vue3 app</p>
     </div>
   </footer>
 </template>

@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 import { store } from "@/store/store";
 import Home from "../views/Home.vue";

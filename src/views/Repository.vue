@@ -44,7 +44,7 @@ export default defineComponent({
         router.go(-1);
       },
       isDisabled: false,
-      label: "User"
+      label: "Go back to User Repositories"
     });
     const previousStep = reactive({
       action: () => {
